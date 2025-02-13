@@ -1,0 +1,178 @@
+/* General Page Styling */
+body {
+    background: linear-gradient(135deg, rgba(255, 117, 139, 0.5), rgba(255, 126, 179, 0.5)), url("https://i.scdn.co/image/ab67616d0000b273c8048cc53f37a2f4bb1d8057");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+#app {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* GIF Container */
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    animation: fadeIn 3s ease-in-out;
+    margin-bottom: 30px;
+}
+
+.gif_container img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
+    animation: loveEffect 5s infinite alternate ease-in-out;
+    box-shadow: 0 0 15px #ff1493;
+    background-color: transparent; /* Key for GIF transparency */
+}
+
+/* Heading */
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    animation: fadeIn 2s ease-in forwards, heartbeat 2s infinite alternate;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Buttons */
+.buttones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.buttones button {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 2s ease-in 1.5s forwards;
+}
+
+.btn-success {
+    background-color: #ff69b4;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #ff1493;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+}
+
+.pulse {
+    animation: pulseEffect 1.5s infinite alternate;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(217, 83, 79, 0.7);
+}
+
+/* Quote */
+.quote {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heartbeat {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+@keyframes pulseEffect {
+    from { transform: scale(1); box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); }
+    to { transform: scale(1.05); box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); }
+}
+
+@keyframes loveEffect {
+    0% { transform: scale(1); box-shadow: 0 0 10px #ff69b4; }
+    50% { transform: scale(1.05); box-shadow: 0 0 20px #ffb3d9; }
+    100% { transform: scale(1); box-shadow: 0 0 10px #ff69b4; }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    .gif_container {
+        width: 200px;
+        height: 200px;
+    }
+    .buttones button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+    .quote {
+        font-size: 1em;
+    }
+}
+
+#love-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.love-message {
+    position: absolute;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out forwards;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

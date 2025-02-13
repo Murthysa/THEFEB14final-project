@@ -1,0 +1,96 @@
+/* yes.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: transparent; 
+    animation: fadeIn 3s ease-in-out; /* Added animation to the image */
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in forwards, heartbeat 2s infinite alternate; /* Added animations to the heading */
+}
+
+.quote {
+    font-size: 1.2em;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: fadeIn 2s ease-in forwards; /* Added animation to the quote */
+}
+
+body {
+    background: linear-gradient(135deg, rgba(255, 117, 139, 0.5), rgba(255, 126, 179, 0.5)), url("https://i.scdn.co/image/ab67616d0000b273c8048cc53f37a2f4bb1d8057");
+    background-size: cover;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+/* Animations (copied from style.css) */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heartbeat {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+/* In style.css or yes.css or a common styles file */
+
+.heart {
+    position: absolute; /* Essential for positioning */
+    font-size: 1.2em; /* Adjust size as needed */
+    color: rgba(255, 105, 180, 0.5); /* Light pink/red, adjust alpha for transparency */
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 3s ease-in-out forwards; /* Use your existing fadeIn animation */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Example subtle shadow */
+    pointer-events: none; /* Prevent hearts from blocking clicks */
+}
+
+.love-message {
+    position: absolute; /* Essential for positioning */
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.5em; /* Adjust size as needed */
+    color: rgba(255, 255, 255, 0.7); /* Adjust color and transparency */
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 3s ease-in-out forwards;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    white-space: nowrap; /* Prevent words from wrapping */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
